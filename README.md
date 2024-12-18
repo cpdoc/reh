@@ -19,4 +19,6 @@ Orientando/Desenvolvedor:
 
 
 
-![Logo CPDOC](https://cpdoc.fgv.br/sites/default/files/inline-images/logo-pt-br.png)
+<p align="center">
+  <img src="https://cpdoc.fgv.br/sites/default/files/inline-images/logo-pt-br.png" alt="Logo FGV" width="200"/>
+</p>
