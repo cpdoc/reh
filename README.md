@@ -1,3 +1,6 @@
+![Logo FGV](https://upload.wikimedia.org/wikipedia/commons/5/54/Logomarca_da_FGV-CPDOC.png)
+
+
 # Historiografia Visual: Análise de Publicações da REH
 
 Este repositório compõe os resultados (códigos e outputs) de projeto de pesquisa produzido pelo CPDOC/FGV cujo objetivo é realizar a coleta, processamento e visualização dos dados referentes ao conjunto completo de edições digitais da Revista de Estudos Históricos (REH), compreendendo o período de 2001 a 2024. 
@@ -24,4 +27,3 @@ Orientando/Desenvolvedor:
 
 
 
-![Logo FGV](https://upload.wikimedia.org/wikipedia/commons/5/54/Logomarca_da_FGV-CPDOC.png)
