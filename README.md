@@ -25,5 +25,5 @@ Orientando/Desenvolvedor:
 
 
 <p align="center">
-  <img src="https://cpdoc.fgv.br/sites/default/files/inline-images/logo-pt-br.png" alt="Logo FGV" width="200"/>
+  <img src="https://pt.m.wikipedia.org/wiki/Ficheiro:Logomarca_da_FGV-CPDOC.png" alt="Logo FGV" width="200"/>
 </p>
