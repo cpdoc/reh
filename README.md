@@ -24,6 +24,4 @@ Orientando/Desenvolvedor:
 
 
 
-<p align="center">
-  <img src="https://pt.m.wikipedia.org/wiki/Ficheiro:Logomarca_da_FGV-CPDOC.png" alt="Logo FGV" width="200"/>
-</p>
+![Logo FGV](https://upload.wikimedia.org/wikipedia/commons/5/54/Logomarca_da_FGV-CPDOC.png)
