@@ -1,2 +1,2 @@
 # reh
-Revista Estudos Históricos
+Revista Estudos Históricos - REH
