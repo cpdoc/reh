@@ -86,10 +86,10 @@ Daniel Bonatto Seco (<danielbonattoseco@hotmail.com>)
 | **Coleta e conversão dos PDFs publicados**     | *Crawling, webscraping e mineração dos dados em PDF*                                             | **Concluído**            |
 | **Identificação automatizada de referências e autores referenciados** | *REGEX*                                                                                         | **Concluído**            |
 | **Estruturação de metadados da revista** (ano, volume, número, dossiê temático, nome e informações dos autores, título, palavras-chave) | *Webscraping OU estruturação a partir de base de dados de exportação* | **Concluído** |
-| **Inferência de gênero dos autores dos artigos e dos autores referenciados** | *Machine learning a partir de base pré-classificada OU Inteligência Artificial (LLMs)*           | **Concluído**            |
+| **Inferência de gênero dos autores dos artigos e dos autores referenciados** | *[gender-guesser](https://pypi.org/project/gender-guesser/)*           | **Concluído**            |
 | **Inferência de região das instituições**      | *Inteligência Artificial (LLMs)*                                                                | **A realizar**           |
 | **Identificação de Temas**                     | *Topic Modelling (utilizando modelo Latent Dirichlet Allocation - LDA)* | **Concluído**           |
-| **Gráfico interativo - temas**                 | *LDAviz OU D3.js*                                                                               | **Concluído**           |
+| **Gráfico interativo - temas**                 | *LDAviz*                                                                               | **Concluído**           |
 | **Grafo interativo - citações**                | *Python + Gephi + SigmaJS*                                                                      | **Concluído**           |
 | **Grafo interativo - coautoria de artigos**    | *Python + Gephi + SigmaJS*                                                                      | **Concluído**           |
 | **Gráfico estático - quantidade de homens e mulheres citados ao longo do tempo** | *Python + Seaborn*                                                                              | **Concluído**           |
