@@ -14,7 +14,7 @@ Orientadores:
 
 [Dra. Juliana Marques da Silva](http://lattes.cnpq.br/6893642697260226)
 
-[Sérgio Rodrigo Marchiori Praça](http://lattes.cnpq.br/3240046302923224)
+[Prof. Dr. Sérgio Rodrigo Marchiori Praça](http://lattes.cnpq.br/3240046302923224)
 
 Orientando/Desenvolvedor: 
 
