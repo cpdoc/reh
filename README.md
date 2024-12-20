@@ -18,7 +18,7 @@ Orientadores:
 
 Orientando/Desenvolvedor: 
 
-[Daniel Bonatto Seco](http://lattes.cnpq.br/8325397475123191)
+[Daniel Bonatto Seco, MSc](http://lattes.cnpq.br/8325397475123191)
 
 ## Licença
 
