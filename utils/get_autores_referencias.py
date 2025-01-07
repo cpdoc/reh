@@ -1,9 +1,6 @@
-from pdfminer.high_level import extract_text
 from pdf2image import convert_from_bytes
 from pytesseract import pytesseract
 import re
-import pandas as pd
-import gender_guesser.detector as gender
 from io import BytesIO
 import requests
 
@@ -43,9 +40,9 @@ def get_autores_referencias(artigo):
         
         # Formatar a lista de autores: juntar o sobrenome e o(s) primeiro(s) nome(s)
         # autores_formatados = [f"{nomes.strip('.')} {sobrenome.title()}".strip() for sobrenome, nomes in autores]
-        autores_formatados = [(re.sub(' +', ' ', autor[1].strip()) + 
+        autores_formatados = [{'Nome':(re.sub(' +', ' ', autor[1].strip()) + 
                                ' ' + 
-                               re.sub(' +', ' ', autor[0].title().strip())).replace('.','') 
+                               re.sub(' +', ' ', autor[0].title().strip())).replace('.','')} 
                               for autor in autores]
 
         return autores_formatados
@@ -74,19 +71,7 @@ def get_autores_referencias(artigo):
         :param pdf_path: Caminho para o arquivo PDF
         :return: Lista de referências extraídas
         """
-        # # Extrair o texto do PDF
-        # texto = extract_text(pdf_path)
         
-        # # Localizar a seção de referências
-        # references_section = find_references_section(texto)
-        
-        # if references_section:
-        #     # Dividir e retornar as referências individuais
-        #     referencias = split_references(references_section)
-        #     referencias = [referencia.replace('\n'," ") for referencia in referencias]
-        #     return references_section, referencias
-        # else:
-        #     print('Seção de referências não encontrada. Realizando OCR do documento...')
         pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
         imagens = convert_from_bytes(pdf_path.getvalue(), 
                                      poppler_path="C:\\Program Files\\poppler-24.08.0\\Library\\bin")
@@ -104,7 +89,7 @@ def get_autores_referencias(artigo):
                 
                 return references_section, referencias
             
-        print("Seção de referências não encontrada.")
+        print(f"Seção de referências não encontrada para o artigo {artigo['URL']}.")
         return [], []
     
     if artigo['URL_PDF']:
@@ -125,17 +110,8 @@ def get_autores_referencias(artigo):
             autores = []
             for i, ref in enumerate(referencias_extraidas):
                 autores.extend(extract_author_names(ref))
-        
-            bd_autores = pd.DataFrame(autores, columns=['nomeAutor'])
-        
-            d = gender.Detector()
-            for i, linha in bd_autores.iterrows():
-                bd_autores.loc[i,'generoInferido'] = d.get_gender(linha['nomeAutor'].split(' ')[0])
-            
-            print(f"{artigo['URL']}: {len(autores)}")
+                    
             return autores
         else:
             print("Erro ao coletar seção de referências.")
             return None
-    
-
