@@ -9,6 +9,9 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 def plot_generos_por_ano_artigos(edicoes_reh, categoria):
     
+    if not os.path.exists('./outputs/plots'):
+        os.makedirs('./outputs/plots')
+    
     # Preparar os dados para análise
     entries = []
     
@@ -23,16 +26,12 @@ def plot_generos_por_ano_artigos(edicoes_reh, categoria):
         # Iterar sobre os artigos
         for artigo in artigos:
             autores_referencias = artigo.get(categoria, [])
-    
-            if not autores_referencias:
-                print(f"Aviso: Nenhuma referência de autores encontrada para um artigo na edição do ano {ano}.")
-    
+        
             # Iterar sobre os autores nas referências
-            for autor in autores_referencias:
-                genero = autor.get('Genero', 'Desconhecido')
-                if not genero:
-                    print(f"Aviso: Gênero ausente para um autor na edição do ano {ano}.")
-                entries.append({'Ano': ano, 'Genero': genero})
+            if autores_referencias:
+                for autor in autores_referencias:
+                    genero = autor.get('Genero', 'Desconhecido')
+                    entries.append({'Ano': ano, 'Genero': genero})
     
     if not entries:
         print("Erro: A lista 'entries' está vazia. Verifique a estrutura do JSON.")
@@ -77,7 +76,7 @@ def plot_generos_por_ano_artigos(edicoes_reh, categoria):
         plt.legend(title='Gênero')
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.show()  # Exibir o primeiro gráfico
+        plt.savefig(f"./outputs/plots/generos_{categoria}.png", dpi=300)
         
         # Segundo gráfico: Diferença de homens e mulheres
         plt.figure(figsize=(10, 6))
@@ -102,9 +101,12 @@ def plot_generos_por_ano_artigos(edicoes_reh, categoria):
         plt.legend()
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.show()  # Exibir o segundo gráfico
+        plt.savefig(f"./outputs/plots/diferenca_generos_{categoria}.png", dpi=300)
         
 def plot_generos_por_ano_edicoes(edicoes_reh, categoria):
+
+    if not os.path.exists('./outputs/plots'):
+        os.makedirs('./outputs/plots')
     
     # Preparar os dados para análise
     entries = []
@@ -115,14 +117,9 @@ def plot_generos_por_ano_edicoes(edicoes_reh, categoria):
         
         edition_referencias = edition.get(categoria, [])
     
-        if not edition_referencias:
-            print(f"Aviso: Nenhuma referência de autores encontrada para a edição do ano {ano}.")
-
         # Iterar sobre os autores nas referências
         for autor in edition_referencias:
             genero = autor.get('Genero', 'Desconhecido')
-            if not genero:
-                print(f"Aviso: Gênero ausente para um autor na edição do ano {ano}.")
             entries.append({'Ano': ano, 'Genero': genero})
     
     if not entries:
@@ -168,7 +165,8 @@ def plot_generos_por_ano_edicoes(edicoes_reh, categoria):
         plt.legend(title='Gênero')
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.show()  # Exibir o primeiro gráfico
+        plt.savefig(f"./outputs/plots/generos_{categoria}.png", dpi=300)
+
         
         # Segundo gráfico: Diferença de homens e mulheres
         plt.figure(figsize=(10, 6))
@@ -193,4 +191,4 @@ def plot_generos_por_ano_edicoes(edicoes_reh, categoria):
         plt.legend()
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.show()  # Exibir o segundo gráfico
+        plt.savefig(f"./outputs/plots/diferenca_generos_{categoria}.png", dpi=300)

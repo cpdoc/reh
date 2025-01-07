@@ -1,6 +1,7 @@
 import pandas as pd
 import networkx as nx
 from itertools import permutations
+import os
 
 def geracao_linkset_referencias(edicoes_reh):
     nodeset = pd.DataFrame(columns = ['ID', 'Label', 'Tipo'])
@@ -43,8 +44,13 @@ def geracao_linkset_referencias(edicoes_reh):
     for _, row in linkset.iterrows():
         G.add_edge(row['Source'], row['Target'])
     
+    if not os.path.exists('./outputs/networks'):
+        os.makedirs('./outputs/networks')
+    if not os.path.exists('./outputs/networks/gephi'):
+        os.makedirs('./outputs/networks/gephi')
+
     # Exportando para .gexf
-    output_file = "./outputs/grafo_referencias_REH.gexf"
+    output_file = "./outputs/networks/gephi/grafo_referencias_REH.gexf"
     nx.write_gexf(G, output_file)    
 
     return nodeset, linkset
@@ -101,9 +107,14 @@ def geracao_linkset_autores(edicoes_reh):
     # Adicionando as arestas
     for _, row in linkset.iterrows():
         G.add_edge(row['Source'], row['Target'])
-    
+
+    if not os.path.exists('./outputs/networks'):
+        os.makedirs('./outputs/networks')
+    if not os.path.exists('./outputs/networks/gephi'):
+        os.makedirs('./outputs/networks/gephi')
+
     # Exportando para .gexf
-    output_file = "./outputs/grafo_autores_REH.gexf"
+    output_file = "./outputs/networks/gephi/grafo_autores_REH.gexf"
     nx.write_gexf(G, output_file)    
 
     return nodeset, linkset

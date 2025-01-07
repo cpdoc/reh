@@ -6,6 +6,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import nltk
 import spacy
+import os
 
 # Baixar dependências do NLTK
 
@@ -19,7 +20,6 @@ nlp = spacy.load("pt_core_news_sm")
 
 def topic_modelling_artigos(json_data):
     
-    print('Realizando Topic Modelling dos artigos...')
     # Pré-processamento dos textos
 
     def preprocess_text(text):
@@ -50,7 +50,7 @@ def topic_modelling_artigos(json_data):
 
     # Modelagem de tópicos com LDA
     num_topics = 10  # Definir número de tópicos desejados
-    lda_model = LdaModel(corpus, num_topics=num_topics, id2word=dictionary, passes=20, random_state=99999)
+    lda_model = LdaModel(corpus, num_topics=num_topics, id2word=dictionary, passes=20, random_state=999999)
 
     # Atribuir tema predominante a cada artigo
     temas_artigos = []
@@ -65,4 +65,8 @@ def topic_modelling_artigos(json_data):
             
     vis_data = gensimvis.prepare(lda_model, corpus, dictionary)
     pyLDAvis.display(vis_data)
-    pyLDAvis.save_html(vis_data, './outputs/lda_artigos_REH.html')
+    
+    if not os.path.exists('./outputs/lda'):
+        os.makedirs('./outputs/lda')
+        
+    pyLDAvis.save_html(vis_data, './outputs/lda/lda_artigos_REH.html')
