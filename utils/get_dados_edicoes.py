@@ -4,7 +4,32 @@ import re
 
 def get_edicoes_reh():
     
-    def corrigir_chaves(lista_dicionarios, mapeamento_chaves):
+    def corrigir_chaves(lista_dicionarios):
+        
+        mapeamento_chaves = {
+            'Estagiário' : 'Estagiários(as)',
+            'Estagiária' : 'Estagiários(as)',
+            'Estagiários' : 'Estagiários(as)',
+            'Estagiárias' : 'Estagiários(as)',
+            'Editor Convidado' : 'Editores(as) Convidados(as)',
+            'Editora Convidada' : 'Editores(as) Convidados(as)',
+            'Editores Convidados' : 'Editores(as) Convidados(as)',
+            'Editoras Convidadas' : 'Editores(as) Convidados(as)',
+            'Secretário' : 'Secretários(as)',
+            'Secretária' : 'Secretários(as)',
+            'Secretários' : 'Secretários(as)',
+            'Secretárias' : 'Secretários(as)',
+            'Editor' : 'Editores(as)',
+            'Editora' : 'Editores(as)',
+            'Editores' : 'Editores(as)',
+            'Editoras' : 'Editores(as)',
+            'Digitador' : 'Digitadores(as)',
+            'Digitadora' : 'Digitadores(as)',
+            'Digitadores' : 'Digitadores(as)',
+            'Digitadoras' : 'Digitadores(as)',
+            'Pareceristasad hoc' : 'Pareceristas ad hoc'
+        }
+
         nova_lista = []
         
         # Converter o mapeamento de chaves para ter todas as chaves em minúsculas
@@ -32,30 +57,6 @@ def get_edicoes_reh():
             nova_lista.append(novo_dict)
         
         return nova_lista
-
-    mapeamento_chaves = {
-        'Estagiário' : 'Estagiários/as',
-        'Estagiária' : 'Estagiários/as',
-        'Estagiários' : 'Estagiários/as',
-        'Estagiárias' : 'Estagiários/as',
-        'Editor Convidado' : 'Editores(as) Convidados(as)',
-        'Editora Convidada' : 'Editores(as) Convidados(as)',
-        'Editores Convidados' : 'Editores(as) Convidados(as)',
-        'Editoras Convidadas' : 'Editores(as) Convidados(as)',
-        'Secretário' : 'Secretários(as)',
-        'Secretária' : 'Secretários(as)',
-        'Secretários' : 'Secretários(as)',
-        'Secretárias' : 'Secretários(as)',
-        'Editor' : 'Editores(as)',
-        'Editora' : 'Editores(as)',
-        'Editores' : 'Editores(as)',
-        'Editoras' : 'Editores(as)',
-        'Digitador' : 'Digitadores(as)',
-        'Digitadora' : 'Digitadores(as)',
-        'Digitadores' : 'Digitadores(as)',
-        'Digitadoras' : 'Digitadores(as)',
-        'Pareceristasad hoc' : 'Pareceristas ad hoc'
-    }
 
     # URL da página prrincipal
     url = "https://periodicos.fgv.br/reh/issue/archive"
@@ -145,7 +146,7 @@ def get_edicoes_reh():
             # Adiciona os dados extraídos à lista
             issues_list.append(issue_data)
         
-        issues_list = corrigir_chaves(issues_list, mapeamento_chaves)
+        issues_list = corrigir_chaves(issues_list)
         return issues_list
     else:
         print(f"Erro ao acessar a página: {response.status_code}")
