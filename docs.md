@@ -83,16 +83,16 @@ Daniel Bonatto Seco (<danielbonattoseco@hotmail.com>)
 
 | **Atividade**                                   | **Metodologia**                                                                                   | **Status**               |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------|--------------------------|
-| **Coleta e conversão dos PDFs publicados**     | *Crawling, webscraping e mineração dos dados em PDF*                                             | **Concluído**            |
-| **Identificação automatizada de referências e autores referenciados** | *REGEX*                                                                                         | **Concluído**            |
-| **Estruturação de metadados da revista** (ano, volume, número, dossiê temático, nome e informações dos autores, título, palavras-chave) | *Webscraping* | **Concluído** |
+| **Coleta e conversão dos PDFs publicados**     | *Crawling + Webscraping - [Beautifulsoup](https://pypi.org/project/beautifulsoup4/)*                                             | **Concluído**            |
+| **Identificação automatizada de referências e autores referenciados** | *REGEX + Optical Character Recognition - OCR ([pdf2image](https://pypi.org/project/pdf2image/) + [pytesseract](https://pypi.org/project/pytesseract/))*                                                                                         | **Concluído**            |
+| **Estruturação de metadados da revista** (ano, volume, número, dossiê temático, nome e informações dos autores, título, palavras-chave) | *Webscraping - [Beautifulsoup](https://pypi.org/project/beautifulsoup4/)* | **Concluído** |
 | **Inferência de gênero dos autores dos artigos e dos autores referenciados** | *[gender-guesser](https://pypi.org/project/gender-guesser/)*           | **Concluído**            |
 | **Inferência de região das instituições**      | *Inteligência Artificial (LLMs)*                                                                | **A realizar**           |
-| **Identificação de Temas**                     | *Topic Modelling (utilizando modelo Latent Dirichlet Allocation - LDA)* | **Concluído**           |
-| **Gráfico interativo - temas**                 | *pyLDAvis*                                                                               | **Concluído**           |
-| **Grafo interativo - citações**                | *Python + Gephi + SigmaJS*                                                                      | **Concluído**           |
-| **Grafo interativo - coautoria de artigos**    | *Python + Gephi + SigmaJS*                                                                      | **Concluído**           |
-| **Gráfico estático - quantidade de homens e mulheres citados ao longo do tempo** | *Python + Seaborn*                                                                              | **Concluído**           |
-| **Gráfico estático - regiões dos autores e autoras da REH** | *Python + Seaborn*                                                                              | **A realizar**           |
-| **Gráfico estático - quantidade de homens e mulheres autores na REH** | *Python + Seaborn*                                                                              | **Concluído**           |
+| **Identificação de Temas**                     | *Topic Modelling (utilizando modelo Latent Dirichlet Allocation - LDA)*[NLTK](https://www.nltk.org/) + [Spacy](https://spacy.io/) +  [LDA](https://radimrehurek.com/gensim/models/ldamodel.html)* | **Concluído**           |
+| **Gráfico interativo - temas**                 | *[pyLDAvis](https://github.com/bmabey/pyLDAvis)*                                                                               | **Concluído**           |
+| **Grafo interativo - citações**                | *[NetworkX](https://networkx.org/) + [Gephi](https://gephi.org/) + [SigmaJS](https://www.sigmajs.org/)*                                                                      | **Concluído**           |
+| **Grafo interativo - coautoria de artigos**    | *[NetworkX](https://networkx.org/) + [Gephi](https://gephi.org/) + [SigmaJS](https://www.sigmajs.org/)*                                                                      | **Concluído**           |
+| **Gráfico estático - quantidade de homens e mulheres citados ao longo do tempo** | *Python + [Seaborn](https://seaborn.pydata.org/)*                                                                              | **Concluído**           |
+| **Gráfico estático - regiões dos autores e autoras da REH** | *Python + [Seaborn](https://seaborn.pydata.org/)*                                                                              | **A realizar**           |
+| **Gráfico estático - quantidade de homens e mulheres autores na REH** | *Python + [Seaborn](https://seaborn.pydata.org/)*                                                                              | **Concluído**           |
 
