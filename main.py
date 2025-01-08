@@ -22,6 +22,8 @@ try:
 except FileNotFoundError:
     if input('Arquivo "edicoes_reh.json" não encontrado na pasta "outputs".\nDeseja realizar toda a coleta novamente? (s/n)\n') == 'n':
         exit()
+    else:
+        edicoes_reh = []
     
 print("Coletando conjunto de edições publicadas...")
 edicoes_reh_site = get_edicoes_reh()
