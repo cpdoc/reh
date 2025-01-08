@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "https://i.ibb.co/dDVsgM8/fgv-logo-0-copy.png",
+    "link": "https://github.com/cpdoc/reh",
+    "text": "CPDOC"
+  },
+  "text": {
+    "more": "Esta rede integra os resultados do projeto \"Historiografia Visual: Análise de Publicações da REH\". \u003cbr\u003e\n\u003ca href\u003d\"https://periodicos.fgv.br/reh\"\u003eAcesse a Revista de Estudos Históricos\u003c/a\u003e \u003cbr\u003e\n\u003ca href\u003d\"https://github.com/cpdoc/reh\"\u003eAcesse o repositório do projeto (GitHub)\u003c/a\u003e",
+    "intro": "Rede de autoria/coautoria de artigos publicados em todas as edições da REH - Revista Estudos Históricos do CPDOC/FGV.",
+    "title": "Revista Estudos Históricos - Rede de autoria/coautoria de artigos"
+  },
+  "legend": {
+    "edgeLabel": "Vínculos",
+    "colorLabel": "Tipo",
+    "nodeLabel": "Nós"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": false,
+    "hoverBehavior": "default"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": false,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 10,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
