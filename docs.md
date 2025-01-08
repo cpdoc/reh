@@ -28,7 +28,7 @@ Siga os passos abaixo para configurar e executar o projeto:
 
 Certifique-se de que você tenha o Python instalado e configurado corretamente em sua máquina antes de iniciar os passos acima.
 
-## Estrutura de Dados
+## Estrutura de Dados (outputs/edicoes_reh.json)
 
 ```json
 {
