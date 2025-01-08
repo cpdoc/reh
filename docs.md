@@ -7,6 +7,28 @@ Daniel Bonatto Seco (<danielbonattoseco@hotmail.com>)
 
 ---
 
+## Como executar o projeto
+
+Siga os passos abaixo para configurar e executar o projeto:
+
+1. Acesse o diretório do projeto:
+   ```bash
+   cd pasta-do-projeto
+   ```
+
+2. Instale as dependências listadas no arquivo `requirements.txt`:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Execute o arquivo principal do projeto:
+   ```bash
+   python main.py
+   ```
+
+Certifique-se de que você tenha o Python instalado e configurado corretamente em sua máquina antes de iniciar os passos acima.
+```
+
 ## Estrutura de Dados
 
 ```json
