@@ -59,9 +59,11 @@ def topic_modelling_artigos(json_data):
         temas_artigos.append(tema_dominante)
 
     # Adicionar tema aos artigos no JSON
+    i = 0
     for edicao in json_data:
-        for i, artigo in enumerate(edicao['Artigos']):
+        for artigo in edicao['Artigos']:
             artigo['Tema'] = f"Tema {temas_artigos[i]}"
+            i += 1
             
     vis_data = gensimvis.prepare(lda_model, corpus, dictionary)
     pyLDAvis.display(vis_data)
