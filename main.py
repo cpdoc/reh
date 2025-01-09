@@ -20,7 +20,7 @@ try:
     with open("./outputs/edicoes_reh.json", "r", encoding="utf-8") as arquivo:
         edicoes_reh = json.load(arquivo)
 except FileNotFoundError:
-    if input('Arquivo "edicoes_reh.json" não encontrado na pasta "outputs".\nDeseja realizar toda a coleta novamente? (s/n)\n') == 'n':
+    if input('Arquivo "edicoes_reh.json" não encontrado na pasta "outputs".\nDeseja realizar toda a coleta novamente? (s/n)\n') in ['n','N']:
         exit()
     else:
         edicoes_reh = []
