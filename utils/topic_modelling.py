@@ -9,19 +9,17 @@ import spacy
 import os
 
 # Baixar dependências do NLTK
-
 for rec in ['tokenizers/punkt','corpora/stopwords','stemmers/rslp']:
     try:
         nltk.data.find(rec)
     except LookupError:
         nltk.download(rec.split('/')[-1])
-        
+
 nlp = spacy.load("pt_core_news_sm")
 
-def topic_modelling_artigos(json_data):
+def topic_modelling_artigos(json_data, seed):
     
     # Pré-processamento dos textos
-
     def preprocess_text(text):
         stop_words = set(stopwords.words('portuguese'))
         palavras_ignoradas = {'artigo', 'pesquisa', 'estudo', 'sobre', 'analisar'}  # Palavras adicionais
@@ -35,10 +33,8 @@ def topic_modelling_artigos(json_data):
     textos = []
     for edicao in json_data:
         for artigo in edicao['Artigos']:
-            resumo = artigo['Resumo'] if isinstance(artigo['Resumo'], 
-                                                    str) else ''
-            palavras_chave = " ".join(artigo['Palavras chave']) if isinstance(artigo['Palavras chave'], 
-                                                                              list) else ''
+            resumo = artigo['Resumo'] if isinstance(artigo['Resumo'], str) else ''
+            palavras_chave = " ".join(artigo['Palavras chave']) if isinstance(artigo['Palavras chave'], list) else ''
             textos.append(resumo + " " + palavras_chave)
     
     # Pré-processar os textos
@@ -50,7 +46,7 @@ def topic_modelling_artigos(json_data):
 
     # Modelagem de tópicos com LDA
     num_topics = 10  # Definir número de tópicos desejados
-    lda_model = LdaModel(corpus, num_topics=num_topics, id2word=dictionary, passes=20, random_state=999999)
+    lda_model = LdaModel(corpus, num_topics=num_topics, id2word=dictionary, passes=20, random_state=seed)
 
     # Atribuir tema predominante a cada artigo
     temas_artigos = []
@@ -65,6 +61,14 @@ def topic_modelling_artigos(json_data):
             artigo['Tema'] = f"Tema {temas_artigos[i]}"
             i += 1
             
+    # Extração das 50 principais palavras e seus scores de relevância para cada tópico
+    topicos = []
+    for i in range(num_topics):
+        palavras_topico = lda_model.show_topic(i, topn=50)  # Extrair 50 palavras mais relevantes para o tópico
+        palavras_topico_formatadas = [{"termo": palavra, "score": score} for palavra, score in palavras_topico]
+        topicos.append({"topico": i, "termos": palavras_topico_formatadas})
+
+    # Visualização do modelo LDA
     vis_data = gensimvis.prepare(lda_model, corpus, dictionary)
     pyLDAvis.display(vis_data)
     
@@ -72,3 +76,6 @@ def topic_modelling_artigos(json_data):
         os.makedirs('./outputs/lda')
         
     pyLDAvis.save_html(vis_data, './outputs/lda/lda_artigos_REH.html')
+    
+    # Retornar os tópicos com as palavras e seus scores de relevância
+    return topicos

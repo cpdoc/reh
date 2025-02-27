@@ -100,7 +100,7 @@ autores_referencias = pd.DataFrame([
 #%% 
 print('Realizando Topic Modelling dos artigos...')
 
-topic_modelling_artigos(edicoes_reh)
+topicos = topic_modelling_artigos(edicoes_reh, seed=999999)
 
 #%% 
 print("Gerando plots...")
