@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2025-01-07">
+  <meta lastmodifieddate="2025-02-27">
     <creator>NetworkX 3.2.1</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
@@ -9534,6 +9534,80 @@
           <attvalue for="0" value="Autor" />
         </attvalues>
       </node>
+      <node id="https://periodicos.fgv.br/reh/issue/view/5202" label="História das Mulheres">
+        <attvalues>
+          <attvalue for="0" value="Edição" />
+          <attvalue for="1" value="84" />
+          <attvalue for="2" value="2025" />
+          <attvalue for="3" value="janeiro - abril" />
+          <attvalue for="4" value="https://periodicos.fgv.br/reh/issue/view/5202" />
+        </attvalues>
+      </node>
+      <node id="https://periodicos.fgv.br/reh/article/view/91605" label="Eu também estava lá">
+        <attvalues>
+          <attvalue for="0" value="Artigo" />
+          <attvalue for="5" value="A voz política das mulheres nos discursos da CNV sobre a Ditadura Militar brasileira" />
+          <attvalue for="6" value="v. 38 n. 84 (2025): História das Mulheres" />
+          <attvalue for="7" value="2025-02-26" />
+          <attvalue for="4" value="https://periodicos.fgv.br/reh/article/view/91605" />
+        </attvalues>
+      </node>
+      <node id="Caroline Rios Costa" label="Caroline Rios Costa">
+        <attvalues>
+          <attvalue for="0" value="Autor" />
+        </attvalues>
+      </node>
+      <node id="https://periodicos.fgv.br/reh/article/view/91951" label="Primeira Onda">
+        <attvalues>
+          <attvalue for="0" value="Artigo" />
+          <attvalue for="5" value="feminismo e a participação de mulheres na imprensa curitibana (1853-1953)." />
+          <attvalue for="6" value="v. 38 n. 84 (2025): História das Mulheres" />
+          <attvalue for="7" value="2025-02-26" />
+          <attvalue for="4" value="https://periodicos.fgv.br/reh/article/view/91951" />
+        </attvalues>
+      </node>
+      <node id="Máira Nunes" label="Máira Nunes">
+        <attvalues>
+          <attvalue for="0" value="Autor" />
+        </attvalues>
+      </node>
+      <node id="Regiane Ribeiro" label="Regiane Ribeiro">
+        <attvalues>
+          <attvalue for="0" value="Autor" />
+        </attvalues>
+      </node>
+      <node id="https://periodicos.fgv.br/reh/article/view/91975" label="Por uma breve história da vida privada das mulheres no cinema ficcional brasileiro de 1950 a 2000">
+        <attvalues>
+          <attvalue for="0" value="Artigo" />
+          <attvalue for="6" value="v. 38 n. 84 (2025): História das Mulheres" />
+          <attvalue for="7" value="2025-02-26" />
+          <attvalue for="4" value="https://periodicos.fgv.br/reh/article/view/91975" />
+        </attvalues>
+      </node>
+      <node id="Roberta Veiga" label="Roberta Veiga">
+        <attvalues>
+          <attvalue for="0" value="Autor" />
+        </attvalues>
+      </node>
+      <node id="Natalia Marchiori" label="Natalia Marchiori">
+        <attvalues>
+          <attvalue for="0" value="Autor" />
+        </attvalues>
+      </node>
+      <node id="https://periodicos.fgv.br/reh/article/view/91556" label="Feminismo e eugenia nos discursos de Lily Lages a respeito de políticas materno-infantis">
+        <attvalues>
+          <attvalue for="0" value="Artigo" />
+          <attvalue for="5" value="(Brasil, 1930-1934)" />
+          <attvalue for="6" value="v. 38 n. 84 (2025): História das Mulheres" />
+          <attvalue for="7" value="2025-02-26" />
+          <attvalue for="4" value="https://periodicos.fgv.br/reh/article/view/91556" />
+        </attvalues>
+      </node>
+      <node id="Patricia Urruzola" label="Patricia Urruzola">
+        <attvalues>
+          <attvalue for="0" value="Autor" />
+        </attvalues>
+      </node>
     </nodes>
     <edges>
       <edge source="https://periodicos.fgv.br/reh/article/view/89342" target="https://periodicos.fgv.br/reh/issue/view/5095" id="0">
@@ -18077,6 +18151,76 @@
         </attvalues>
       </edge>
       <edge source="Luiz Eduardo Soares" target="https://periodicos.fgv.br/reh/article/view/1932" id="1708">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="https://periodicos.fgv.br/reh/article/view/91605" target="https://periodicos.fgv.br/reh/issue/view/5202" id="1709">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Caroline Rios Costa" target="https://periodicos.fgv.br/reh/article/view/91605" id="1710">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="https://periodicos.fgv.br/reh/article/view/91951" target="https://periodicos.fgv.br/reh/issue/view/5202" id="1711">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Máira Nunes" target="https://periodicos.fgv.br/reh/article/view/91951" id="1712">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Máira Nunes" target="Regiane Ribeiro" id="1713">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Regiane Ribeiro" target="https://periodicos.fgv.br/reh/article/view/91951" id="1714">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Regiane Ribeiro" target="Máira Nunes" id="1715">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="https://periodicos.fgv.br/reh/article/view/91975" target="https://periodicos.fgv.br/reh/issue/view/5202" id="1716">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Roberta Veiga" target="https://periodicos.fgv.br/reh/article/view/91975" id="1717">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Roberta Veiga" target="Natalia Marchiori" id="1718">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Natalia Marchiori" target="https://periodicos.fgv.br/reh/article/view/91975" id="1719">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Natalia Marchiori" target="Roberta Veiga" id="1720">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="https://periodicos.fgv.br/reh/article/view/91556" target="https://periodicos.fgv.br/reh/issue/view/5202" id="1721">
+        <attvalues>
+          <attvalue for="8" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="Patricia Urruzola" target="https://periodicos.fgv.br/reh/article/view/91556" id="1722">
         <attvalues>
           <attvalue for="8" value="0" />
         </attvalues>
