@@ -3,7 +3,7 @@ gensim==4.3.3
 matplotlib==3.8.4
 networkx==3.2.1
 nltk==3.8.1
-numpy==2.2.1
+numpy==1.23.5
 pandas==2.2.3
 pdf2image==1.17.0
 pyLDAvis==3.4.1
